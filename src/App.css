@@ -1,8 +1,22 @@
-body {
-  background-color: black;
-  color: white;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+  color: black;
+  margin: 0;
+  font-family: var(--font-roboto);
 }
 
 .App {
@@ -35,7 +49,13 @@ body {
   color: #61dafb;
 }
 
+.title {
+  padding: 10px;
+  background-color: #282c34;
+}
+
 .routine-container {
+  color: whitesmoke;
   display: flex;
   justify-content: space-between;
   gap: 20;
@@ -45,34 +65,46 @@ body {
   flex-wrap: wrap;
 }
 
+.title-container {
+  display: flex;
+  align-items: center; 
+  color : black;
+}
+
+
 .routine-title {
   text-align: left;
   margin-left: 20px;
-  /* margin-bottom: 20px; */
+}
+
+
+.Routine {
+  border: 1px solid rgb(47, 1, 1);
+  background-color:#333;
+  padding: 20px;
+  width: 27%;
+  border-radius: 15px;
+  transition: background-color 0.3s, border-color 0.3s; 
 }
 
 .Routine:hover {
   transform: scale(1, 1.05);
-  background-color: #333;  /* Change background color on hover */
+  background-color: rgb(47, 1, 1);  /* Change background color on hover */
 }
 
-.Routine {
-  border: 1px solid rgb(47, 1, 1);
-  background-color: rgb(47, 1, 1);
-  padding: 20px;
-  width: 27%;
-  border-radius: 15px;
-  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+.Routine:hover .edit-button {
+  opacity: 1; 
 }
-
 .edit-button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  padding-left: 20px;
   background: none;
   border: none;
   cursor: pointer;
+  opacity: 0;
+  /* transition: opacity 0.3s;  */
 }
+
+
 
 .edit-icon {
   width: 30px; 
@@ -80,10 +112,9 @@ body {
 }
 
 .Exo {
-  border: 1px solid black;
   padding: 10px;
   margin: 10px;
-  background-color:rgb(49, 10, 18);
+  background-color:#333;
   border-radius: 15px;
 }
 

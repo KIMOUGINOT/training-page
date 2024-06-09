@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Training App</h1>
+      <h1 className='title'>Training App</h1>
       <div className='routine-container'>
         <Routine name='Monday' data={data}/>
         <Routine name='Tuesday' data={data}/>
