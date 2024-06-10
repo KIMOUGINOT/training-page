@@ -1,11 +1,11 @@
 import React from "react";
 import Exo from './Exo'; // Component to create
 
-const Routine = ({ name, data }) => {
+const Routine = ({ title, data }) => {
     return (
         <div className="Routine">
             <div className="title-container">
-                <h2 className="routine-title">{name}</h2>
+                <h2 className="routine-title">{title}</h2>
                 <button className="edit-button">
                     <img src={process.env.PUBLIC_URL + '/editer.png'} alt="Editer icon" className="icon"/>
                 </button>
