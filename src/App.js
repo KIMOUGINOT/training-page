@@ -10,7 +10,7 @@ function App() {
     { title: "Morning Routine", data: [{ name: "jump rope", duration: "30" }, { name: "push up", duration: "60" }] },
     { title: "Evening Routine", data: [{ name: "sit up", duration: "45" }, { name: "squat", duration: "50" }] },
     { title: "Noon Routine", data: [{ name: "plank", duration: "60" }, { name: "burpees", duration: "30" }] },
-    { title: "Afternoon Routine", data: [{ name: "lunges", duration: "40" }, { name: "mountain climbers", duration: "50" }] },
+    { title: "Afternoon Routine", data: [{ name: "lunges", duration: "40" }, { name: "mountain climbers", duration: "50" }, { name: "bicep curls", duration: "35" }, { name: "tricep dips", duration: "45" }] },
     { title: "Night Routine", data: [{ name: "bicep curls", duration: "35" }, { name: "tricep dips", duration: "45" }] },
     { title: "Workout Routine", data: [{ name: "running", duration: "20" }, { name: "cycling", duration: "60" }] }
   ]);
@@ -28,8 +28,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='title'>Training App</h1>
-      <div className="routine-container">
+      <div className='header'>
+        <h1 className='title'>Training App</h1>
+      </div>
+      <div className="main">
                 {routines.map((routine, index) => (
                     <Routine
                         key={index}

@@ -4,7 +4,7 @@
 * {
   margin: 0;
   border: 0;
-  box-sizing: border-box;
+  box-sizing: content-box ;
 }
 
 :root {
@@ -23,97 +23,60 @@ body {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.header{
   background-color: #282c34;
-  min-height: 100vh;
+  height: 20vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .title {
-  padding: 10px;
-  background-color: #282c34;
+  font-size: 10vh;
 }
 
-.routine-container {
+.main {
   color: whitesmoke;
   display: flex;
-  justify-content: space-between;
-  gap: 45px;
-  padding-top: 45px;
-  padding-inline-start: 80px;
-  padding-inline-end: 80px;
-  flex-wrap: wrap;
-}
-
-.title-container {
-  display: flex;
-  align-items: center; 
-  color : black;
-}
-
-
-.routine-title {
-  text-align: left;
-  margin-left: 20px;
-}
-
-.Routine {
+  align-items: center ;
+  justify-content: space-around;
+  gap: 8vh;
+  padding-top: 10vh;
+  padding-inline-start: 2vw;
+  padding-inline-end: 2vw;
+  flex-wrap:wrap;
+  }
+  
+.routine {
   border: 1px solid rgb(47, 1, 1);
   background-color:#333;
-  padding: 20px;
-  width: 27%;
+  padding: 5vh;
+  /* width: 27%; */
+  /* height: 70%; */
   border-radius: 15px;
   transition: background-color 0.3s, border-color 0.3s; 
 }
 
-.Routine:hover {
-  transform: scale(1, 1.05);
-  background-color: rgb(47, 1, 1);  /* Change background color on hover */
+.routine-header {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  color : black;
 }
 
-.Routine:hover .title-container {
-  color: whitesmoke; 
+.routine-title {
+  text-align: left;
 }
 
-.Routine:hover .edit-button {
-  opacity: 1; 
-}
-
-.Routine:hover .button {
-  opacity: 1; 
-}
-
+.routine-buttons {
+  display : flex ;
+  justify-content: space-between;
+  align-items: center;
+  }
+  
 .icon {
   width: 30px; 
   height: 30px;
-}
-
-.edit-button {
-  padding-left: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  opacity: 0;
 }
 
 .button {
@@ -121,6 +84,18 @@ body {
   border: none;
   cursor: pointer;
   opacity: 0;
+}
+.routine:hover {
+  transform: scale(1, 1.05);
+  background-color: rgb(47, 1, 1);
+}
+
+.routine:hover .routine-header {
+  color: whitesmoke; 
+}
+
+.routine:hover .button {
+  opacity: 1; 
 }
 
 .Exo {
@@ -130,11 +105,17 @@ body {
   border-radius: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1400px) {
+  .routine{
+    width: 30%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .main{
+    flex-direction: column;
+  }
+  .routine{
+    width: 60%;
   }
 }
