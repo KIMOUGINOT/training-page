@@ -7,8 +7,8 @@ import Exo from './Exo';
 
 function App() {
   const [routines, setRoutines] = useState(() => loadFromLocalStorage('routines') || [
-    { title: "Morning Routine", data: [{ name: "jump rope", duration: "30" }, { name: "push up", duration: "60" }] },
-    { title: "Evening Routine", data: [{ name: "sit up", duration: "45" }, { name: "squat", duration: "50" }] },
+    { title: "Morning Routine", data: [{ name: "jump rope", duration: "5 min  " }, { name: "push up", duration: "60" },{ name: "sit up", duration: "45" }, { name: "squat", duration: "50" }] },
+    { title: "Evening Routine", data: [{ name: "sit up", duration: "45" }, { name: "squat", duration: "50" },{ name: "sit up", duration: "45" }, { name: "squat", duration: "50" }] },
     { title: "Noon Routine", data: [{ name: "plank", duration: "60" }, { name: "burpees", duration: "30" }] },
     { title: "Afternoon Routine", data: [{ name: "lunges", duration: "40" }, { name: "mountain climbers", duration: "50" }, { name: "bicep curls", duration: "35" }, { name: "tricep dips", duration: "45" }] },
     { title: "Night Routine", data: [{ name: "bicep curls", duration: "35" }, { name: "tricep dips", duration: "45" }] },
@@ -29,6 +29,7 @@ function App() {
   return (
     <div className="App">
       <div className='header'>
+        <img src={process.env.PUBLIC_URL + '/kitraining.png'} alt="kitraining" className="header-title"/>
         <h1 className='title'>Training App</h1>
       </div>
       <div className="main">

@@ -24,11 +24,16 @@ body {
 }
 
 .header{
-  background-color: #282c34;
+  background-color: rgb(78,78,78);
   height: 20vh;
   display: flex;
-  align-items: center; 
-  justify-content: center;
+  align-items:center; 
+  justify-content:flex-start;
+}
+
+.header-title{
+  width: 30vw;
+  height:auto;
 }
 
 .title {
@@ -114,6 +119,7 @@ body {
 @media (max-width: 768px) {
   .main{
     flex-direction: column;
+    align-items: center;
   }
   .routine{
     width: 60%;
