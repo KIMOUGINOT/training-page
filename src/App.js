@@ -19,13 +19,6 @@ function App() {
     saveToLocalStorage('routines', routines);
   }, [routines]);
 
-  const data = [
-    { name: "jump rope", duration: "30 sec" },
-    { name: "push up", duration: "60 sec" },
-    { name:"sit up", duration:"60 sec"},
-    { name:"pull up", duration:"AMRAP"}
-  ];
-
   return (
     <div className="App">
       <div className='header'>
