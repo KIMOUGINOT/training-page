@@ -30,7 +30,11 @@ function App() {
     <div className="App">
       <div className='header'>
         <img src={process.env.PUBLIC_URL + '/kitraining.png'} alt="kitraining" className="header-title"/>
-        <h1 className='title'>Training App</h1>
+        <div className='header-selector'>
+          <p className='page'>Programs</p>
+          <p className='page'>Timer</p>
+          <p className='page'>Alarm</p>
+        </div>
       </div>
       <div className="main">
                 {routines.map((routine, index) => (
