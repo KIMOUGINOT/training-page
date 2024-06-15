@@ -4,7 +4,7 @@ import { saveToLocalStorage, loadFromLocalStorage } from './localStorage';
 import './App.css';
 import Programs from './Programs'
 import Home from './Home'
-import Timer from './Timer'
+import Stopwatch from './Stopwatch'
 import Alarm from './Alarm'
 
 function App() {
@@ -25,8 +25,8 @@ function App() {
             return <Home />;
         case 'programs':
             return <Programs routines={routines} />;
-        case 'timer':
-            return <Timer />;
+        case 'stopwatch':
+            return <Stopwatch />;
         case 'alarm':
             return <Alarm />;
         default:
@@ -49,7 +49,7 @@ function App() {
         />
         <div className='header-selector'>
           <p className='page' onClick={() => setPage('programs')}>Programs</p>
-          <p className='page' onClick={() => setPage('timer')}>Timer</p>
+          <p className='page' onClick={() => setPage('stopwatch')}>Stopwatch</p>
           <p className='page' onClick={() => setPage('alarm')}>Alarm</p>
         </div>
       </div>
