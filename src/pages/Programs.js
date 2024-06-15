@@ -1,4 +1,4 @@
-import Routine from './Routine';
+import Routine from '../components/Routine';
 
 const Programs = ({ routines }) => {
     return (

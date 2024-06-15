@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import React, { useState, useEffect } from 'react';
 import { saveToLocalStorage, loadFromLocalStorage } from './localStorage';
 import './App.css';
-import Programs from './Programs'
-import Home from './Home'
-import Stopwatch from './Stopwatch'
-import Alarm from './Alarm'
+import Programs from './pages/Programs'
+import Home from './pages/Home'
+import Stopwatch from './pages/Stopwatch'
+import Alarm from './pages/Alarm'
 
 function App() {
   const [routines, setRoutines] = useState(() => loadFromLocalStorage('routines') || [
@@ -42,7 +41,7 @@ function App() {
     <div className="App">
       <div className='header'>
         <img 
-          src={process.env.PUBLIC_URL + '/kitraining.png'} 
+          src={process.env.PUBLIC_URL + '/logo/kitraining.png'} 
           alt="kitraining" 
           className="header-title"
           onClick={() => setPage('home')}
