@@ -36,6 +36,7 @@ body {
 .header-title{
   width: 30vw;
   height:auto;
+  cursor: pointer;
 }
 
 .header-selector{
@@ -46,13 +47,15 @@ body {
   color: whitesmoke;
 }
 
+
 .page:hover{
   transform: scale(1.05, 1.05);
   color: black;
+  cursor: pointer;
 }
 
 .main {
-  color: whitesmoke;
+  color: black;
   display: flex;
   align-items: flex-start ;
   justify-content: space-around;
@@ -66,6 +69,7 @@ body {
 .routine {
   border: 1px solid rgb(47, 1, 1);
   background-color:rgb(78,78,78);
+  color: whitesmoke;
   padding: 5vh;
   /* width: 27%; */
   /* height: 70%; */

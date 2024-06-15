@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { saveToLocalStorage, loadFromLocalStorage } from './localStorage';
 import './App.css';
 import Programs from './Programs'
+import Home from './Home'
+import Timer from './Timer'
+import Alarm from './Alarm'
 
 function App() {
   const [routines, setRoutines] = useState(() => loadFromLocalStorage('routines') || [
@@ -14,6 +17,23 @@ function App() {
     { title: "Workout Routine", data: [{ name: "running", duration: "20" }, { name: "cycling", duration: "60" }] }
   ]);
 
+  const [page, setPage] = useState('home') ;
+
+  const renderPage = () => {
+    switch(page) {
+        case 'home':
+            return <Home />;
+        case 'programs':
+            return <Programs routines={routines} />;
+        case 'timer':
+            return <Timer />;
+        case 'alarm':
+            return <Alarm />;
+        default:
+          return <Home/>;
+    }
+  };
+
   useEffect(() => {
     saveToLocalStorage('routines', routines);
   }, [routines]);
@@ -21,15 +41,20 @@ function App() {
   return (
     <div className="App">
       <div className='header'>
-        <img src={process.env.PUBLIC_URL + '/kitraining.png'} alt="kitraining" className="header-title"/>
+        <img 
+          src={process.env.PUBLIC_URL + '/kitraining.png'} 
+          alt="kitraining" 
+          className="header-title"
+          onClick={() => setPage('home')}
+        />
         <div className='header-selector'>
-          <p className='page'>Programs</p>
-          <p className='page'>Timer</p>
-          <p className='page'>Alarm</p>
+          <p className='page' onClick={() => setPage('programs')}>Programs</p>
+          <p className='page' onClick={() => setPage('timer')}>Timer</p>
+          <p className='page' onClick={() => setPage('alarm')}>Alarm</p>
         </div>
       </div>
       <div className="main">
-        <Programs routines={routines}/>
+        {renderPage()}
       </div>
     </div>
   );
