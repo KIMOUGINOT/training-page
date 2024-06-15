@@ -2,8 +2,7 @@ import logo from './logo.svg';
 import React, { useState, useEffect } from 'react';
 import { saveToLocalStorage, loadFromLocalStorage } from './localStorage';
 import './App.css';
-import Routine from './Routine';
-import Exo from './Exo';
+import Programs from './Programs'
 
 function App() {
   const [routines, setRoutines] = useState(() => loadFromLocalStorage('routines') || [
@@ -30,14 +29,8 @@ function App() {
         </div>
       </div>
       <div className="main">
-                {routines.map((routine, index) => (
-                    <Routine
-                        key={index}
-                        title={routine.title}
-                        data={routine.data}
-                    />
-                ))}
-            </div>
+        <Programs routines={routines}/>
+      </div>
     </div>
   );
 }

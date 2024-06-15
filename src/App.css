@@ -29,7 +29,7 @@ body {
   display: flex;
   align-items:center; 
   justify-content:space-between;
-  padding-right: 25vw;
+  padding-right: 20vw;
   padding-left: 2vw;
 }
 
@@ -65,7 +65,7 @@ body {
   
 .routine {
   border: 1px solid rgb(47, 1, 1);
-  background-color:#333;
+  background-color:rgb(78,78,78);
   padding: 5vh;
   /* width: 27%; */
   /* height: 70%; */
@@ -117,7 +117,7 @@ body {
 .Exo {
   padding: 10px;
   margin: 10px;
-  background-color:#333;
+  background-color:rgb(78,78,78);
   border-radius: 15px;
 }
 
