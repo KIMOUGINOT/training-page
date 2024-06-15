@@ -8,13 +8,13 @@ const Routine = ({ title, data }) => {
                 <h2 className="routine-title">{title}</h2>
                 <div className="routine-buttons">
                     <button className="button">
-                        <img src={process.env.PUBLIC_URL + '/editer.png'} alt="Editer icon" className="icon"/>
+                        <img src={process.env.PUBLIC_URL + '/icons/editer.png'} alt="Editer icon" className="icon"/>
                     </button>
                     <button className="button">
-                        <img src={process.env.PUBLIC_URL + '/supprimer.png'} alt="Eraser icon" className="icon"/>
+                        <img src={process.env.PUBLIC_URL + '/icons/supprimer.png'} alt="Eraser icon" className="icon"/>
                     </button>
                     <button className="button">
-                        <img src={process.env.PUBLIC_URL + '/bouton-de-lecture.png'} alt="Read icon" className="icon"/>
+                        <img src={process.env.PUBLIC_URL + '/icons/bouton-de-lecture.png'} alt="Read icon" className="icon"/>
                     </button>
                 </div>
             </div>
