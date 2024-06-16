@@ -19,7 +19,7 @@ body {
 }
 
 .header{
-  background-color:black;
+  background-color:white;
   height: 20vh;
   display: flex;
   align-items:center; 
@@ -29,7 +29,7 @@ body {
 }
 
 .header-title{
-  width: 30vw;
+  width: 29vw;
   height:auto;
   cursor: pointer;
 }
@@ -39,13 +39,13 @@ body {
   align-items:center; 
   justify-content:space-between;
   width: 40vw;
-  color: whitesmoke;
+  color: black;
 }
 
 
 .page:hover{
   transform: scale(1.05, 1.05);
-  color: black;
+  color: gray;
   cursor: pointer;
 }
 
@@ -63,8 +63,7 @@ body {
   
 .routine {
   background-color:rgb(20,20,20);
-  border-color: antiquewhite;
-  border: 1px;
+  border: 1px solid gray;
   color: whitesmoke;
   padding-top: 2vh;
   padding-left: 1vw;
@@ -104,7 +103,7 @@ body {
   opacity: 1;
 }
 .routine:hover {
-  transform: scale(1, 1.05);
+  transform: scale(1.05, 1.05);
 }
 
 .Exo {
@@ -112,18 +111,18 @@ body {
   align-items: stretch;
   justify-content: flex-start;
   margin: 10px 0;
-  padding: 10px;
   background-color:rgb(40,40,40);
   overflow: hidden;
   border-radius: 8px;
 }
 
 .exo-band {
-  width: 10px;
+  width: 8px;
   background-color: #007bff;
 }
 
 .exo-content {
+  padding: 10px;
   color: gray;
 }
 @media (max-width: 1400px) {

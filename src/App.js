@@ -40,7 +40,7 @@ function App() {
     <div className="App">
       <div className='header'>
         <img 
-          src={process.env.PUBLIC_URL + '/logo/kitraining.png'} 
+          src={process.env.PUBLIC_URL + '/logo/white_bg_logo_title.png'} 
           alt="kitraining" 
           className="header-title"
           onClick={() => setPage('home')}
@@ -48,7 +48,7 @@ function App() {
         <div className='header-selector'>
           <p className='page' onClick={() => setPage('programs')}>Programs</p>
           <p className='page' onClick={() => setPage('stopwatch')}>Stopwatch</p>
-          <p className='page' onClick={() => setPage('timer')}>Alarm</p>
+          <p className='page' onClick={() => setPage('timer')}>Timer</p>
         </div>
       </div>
       <div className="main">
