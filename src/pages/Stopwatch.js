@@ -36,8 +36,9 @@ const Stopwatch = () => {
     };
 
     const handleAddLap = () => {
-        setLapNumber(prevLapNumber => prevLapNumber + 1);
-        setLaps([...laps, { lap: lapNumber + 1, time: formatTime(seconds) }]);
+        if (lapNumber < 12) {
+            setLapNumber(prevLapNumber => prevLapNumber + 1);
+            setLaps([...laps, { lap: lapNumber + 1, time: formatTime(seconds) }]);}
     };
 
     const formatTime = (totalSeconds) => {
@@ -47,16 +48,19 @@ const Stopwatch = () => {
     };
 
     return (
-        <div>
-            <h1>Stopwatch</h1>
-            <p className="timer">{formatTime(seconds)}</p>
-            <button onClick={handleStart}>Start</button>
-            <button onClick={handleStop}>Stop</button>
-            <button onClick={handleReset}>Reset</button>
-            <button onClick={handleAddLap}>Add Lap</button>
-            <div id="container">
+        <div className='stopwatch-container'>
+            <div className='interface-container'>
+                <h1 className="timer">{formatTime(seconds)}</h1>
+                <div className='timer-button-container'>
+                    <button className='timer-button' onClick={handleStart}>Start</button>
+                    <button className='timer-button' onClick={handleStop}>Stop</button>
+                    <button className='timer-button' onClick={handleReset}>Reset</button>
+                    <button className='timer-button' onClick={handleAddLap}>Add Lap</button>
+                </div>
+            </div>
+            <div className='lap-container'>
                 {laps.map((lap, index) => (
-                    <h3 key={index}>{`Lap ${lap.lap}: ${lap.time}`}</h3>
+                    <h3 className='lap' key={index}>{`Lap ${lap.lap}: ${lap.time}`}</h3>
                 ))}
             </div>
         </div>

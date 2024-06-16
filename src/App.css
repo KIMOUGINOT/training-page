@@ -125,9 +125,55 @@ body {
   padding: 10px;
   color: gray;
 }
+
+.stopwatch-container{
+  align-items:flex-start;
+  width: 70vw;
+  justify-content: space-around;
+}
+
+.interface-container{
+  flex-direction: column;
+  padding-left: 10vw;
+}
+
+.timer {
+  background-color:rgb(20,20,20);
+  border: 1px solid gray;
+  color: whitesmoke;
+  border-radius: 8px;
+  font-size: 15vw;
+}
+
+.timer-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.timer-button {
+  cursor: pointer;
+  background-color:rgb(40,40,40);
+  border-radius: 0.5vw;
+  color: gray;
+  font-size: 1.5vw;
+  width: 8vw;
+}
+
+.lap-container{
+  flex-direction: column;
+}
+.lap {
+  color: gray;
+  font-size: 1.5vw;
+}
+
 @media (max-width: 1400px) {
   .routine{
     width: 30%;
+  }
+  .stopwatch-container{
+    display: flex;
   }
 }
 
