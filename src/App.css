@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-color:rgb(20,20,20);
   color: black;
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -19,7 +19,7 @@ body {
 }
 
 .header{
-  background-color: rgb(78,78,78);
+  background-color:black;
   height: 20vh;
   display: flex;
   align-items:center; 
@@ -62,13 +62,16 @@ body {
   }
   
 .routine {
-  border: 1px solid rgb(47, 1, 1);
-  background-color:rgb(78,78,78);
+  background-color:rgb(20,20,20);
+  border-color: antiquewhite;
+  border: 1px;
   color: whitesmoke;
-  padding: 5vh;
+  padding-top: 2vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
   /* width: 27%; */
   /* height: 70%; */
-  border-radius: 15px;
+  border-radius: 10px;
   transition: background-color 0.3s, border-color 0.3s; 
 }
 
@@ -76,7 +79,7 @@ body {
   display: flex;
   align-items: center; 
   justify-content: space-between;
-  color : black;
+  color : whitesmoke;
 }
 
 .routine-title {
@@ -98,28 +101,31 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  opacity: 0;
+  opacity: 1;
 }
 .routine:hover {
   transform: scale(1, 1.05);
-  background-color: rgb(47, 1, 1);
-}
-
-.routine:hover .routine-header {
-  color: whitesmoke; 
-}
-
-.routine:hover .button {
-  opacity: 1; 
 }
 
 .Exo {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 10px 0;
   padding: 10px;
-  margin: 10px;
-  background-color:rgb(78,78,78);
-  border-radius: 15px;
+  background-color:rgb(40,40,40);
+  overflow: hidden;
+  border-radius: 8px;
 }
 
+.exo-band {
+  width: 10px;
+  background-color: #007bff;
+}
+
+.exo-content {
+  color: gray;
+}
 @media (max-width: 1400px) {
   .routine{
     width: 30%;

@@ -5,7 +5,7 @@ const Routine = ({ title, data }) => {
     return (
         <div className="routine">
             <div className="routine-header">
-                <h2 className="routine-title">{title}</h2>
+                <h3 className="routine-title">{title}</h3>
                 <div className="routine-buttons">
                     <button className="button">
                         <img src={process.env.PUBLIC_URL + '/icons/editer.png'} alt="Editer icon" className="icon"/>
