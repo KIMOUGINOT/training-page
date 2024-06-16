@@ -4,7 +4,7 @@ import './App.css';
 import Programs from './pages/Programs'
 import Home from './pages/Home'
 import Stopwatch from './pages/Stopwatch'
-import Alarm from './pages/Alarm'
+import Timer from './pages/Timer'
 
 function App() {
   const [routines, setRoutines] = useState(() => loadFromLocalStorage('routines') || [
@@ -15,7 +15,6 @@ function App() {
     { title: "Night Routine", data: [{ name: "bicep curls", duration: "35" }, { name: "tricep dips", duration: "45" }] },
     { title: "Workout Routine", data: [{ name: "running", duration: "20" }, { name: "cycling", duration: "60" }] }
   ]);
-
   const [page, setPage] = useState('home') ;
 
   const renderPage = () => {
@@ -26,8 +25,8 @@ function App() {
             return <Programs routines={routines} />;
         case 'stopwatch':
             return <Stopwatch />;
-        case 'alarm':
-            return <Alarm />;
+        case 'timer':
+            return <Timer />;
         default:
           return <Home/>;
     }
@@ -49,7 +48,7 @@ function App() {
         <div className='header-selector'>
           <p className='page' onClick={() => setPage('programs')}>Programs</p>
           <p className='page' onClick={() => setPage('stopwatch')}>Stopwatch</p>
-          <p className='page' onClick={() => setPage('alarm')}>Alarm</p>
+          <p className='page' onClick={() => setPage('timer')}>Alarm</p>
         </div>
       </div>
       <div className="main">
