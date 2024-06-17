@@ -56,8 +56,8 @@ body {
   justify-content: space-around;
   gap: 8vh;
   padding-top: 10vh;
-  padding-inline-start: 2vw;
-  padding-inline-end: 2vw;
+  /* padding-inline-start: 2vw; */
+  /* padding-inline-end: 2vw; */
   flex-wrap:wrap;
   }
   
@@ -127,15 +127,14 @@ body {
 }
 
 .stopwatch-container{
+  display: block;
   align-items:flex-start;
-  width: 70vw;
   justify-content: space-around;
 }
 
-.interface-container{
+/* .interface-container{
   flex-direction: column;
-  padding-left: 10vw;
-}
+} */
 
 .timer {
   background-color:rgb(20,20,20);
@@ -144,7 +143,19 @@ body {
   border-radius: 8px;
   font-size: 30vw;
 }
-
+.stopwatch-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1.5vh;
+}
+.stopwatch-button {
+  cursor: pointer;
+  background-color:rgb(40,40,40);
+  border-radius: 0.5vw;
+  color: gray;
+  font-size: 6vw;
+}
 .timer-button-container {
   display: flex;
   justify-content: space-between;
@@ -161,11 +172,12 @@ body {
 }
 
 .lap-container{
-  flex-direction: column;
+  margin-top: 5vh;
 }
 .lap {
   color: gray;
-  font-size: 1.5vw;
+  font-size: 5vw;
+  margin-top: 0.5vh;
 }
 
 .time-container{
@@ -196,11 +208,28 @@ body {
   .routine{
     width: 30%;
   }
+}
+
+@media (min-width : 1400px) {
   .stopwatch-container{
     display: flex;
   }
+  .timer{
+    font-size: 20vw;
+  }
+  .stopwatch-button{
+    font-size: 4vw;
+  }
 }
 
+@media (min-width : 1850px) {
+  .timer{
+    font-size: 20vw;
+  }
+  .stopwatch-button{
+    font-size: 4vw;
+  }
+}
 @media (max-width: 768px) {
   .main{
     flex-direction: column;

@@ -51,11 +51,11 @@ const Stopwatch = () => {
         <div className='stopwatch-container'>
             <div className='interface-container'>
                 <h1 className="timer">{formatTime(seconds)}</h1>
-                <div className='timer-button-container'>
-                    <button className='timer-button' onClick={handleStart}>Start</button>
-                    <button className='timer-button' onClick={handleStop}>Stop</button>
-                    <button className='timer-button' onClick={handleReset}>Reset</button>
-                    <button className='timer-button' onClick={handleAddLap}>Add Lap</button>
+                <div className='stopwatch-button-container'>
+                    <button className='stopwatch-button' onClick={handleStart}>Start</button>
+                    <button className='stopwatch-button' onClick={handleStop}>Stop</button>
+                    <button className='stopwatch-button' onClick={handleReset}>Reset</button>
+                    <button className='stopwatch-button' onClick={handleAddLap}>Add Lap</button>
                 </div>
             </div>
             <div className='lap-container'>
