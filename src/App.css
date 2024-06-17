@@ -24,7 +24,7 @@ body {
   display: flex;
   align-items:center; 
   justify-content:space-between;
-  padding-right: 20vw;
+  padding-right: 15vw;
   padding-left: 2vw;
 }
 
@@ -38,7 +38,7 @@ body {
   display: flex;
   align-items:center; 
   justify-content:space-between;
-  width: 40vw;
+  width: 45vw;
   color: black;
 }
 
@@ -122,6 +122,8 @@ body {
 }
 
 .exo-content {
+  /* display: flex; */
+  align-items: flex-start;
   padding: 10px;
   color: gray;
 }
@@ -204,6 +206,7 @@ body {
   scrollbar-color: gray;
 }
 
+/* 
 @media (max-width: 1400px) {
   .routine{
     width: 30%;
@@ -238,4 +241,4 @@ body {
   .routine{
     width: 60%;
   }
-}
+} */
