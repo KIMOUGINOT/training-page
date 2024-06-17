@@ -49,15 +49,20 @@ const Timer = () => {
         return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     };
     return (
-        <div>
-            <h1>Timer</h1>
-            <input type='number' value={inputMinute} onChange={handleInputMinuteChange} ></input>
-            <input type='number' value={inputSecond} onChange={handleInputSecondChange}></input>
-            <p className="timer">{formatTime(seconds)}</p>
-            <button onClick={handleStart}>Start</button>
-            <button onClick={handleStop}>Stop</button>
-            <button onClick={handleReset}>Reset</button>
-        </div>
+        <>
+            <div className='time-container'>
+                <div className='timer-input-container'>
+                    <input className='timer-input' type='number' value={inputMinute} onChange={handleInputMinuteChange} ></input>
+                    <input className='timer-input' type='number' value={inputSecond} onChange={handleInputSecondChange}></input>
+                </div>
+                <p className="timer">{formatTime(seconds)}</p>
+            </div>
+            <div className='timer-button-container'>
+                <button className='timer-button' onClick={handleStart}>Start</button>
+                <button className='timer-button' onClick={handleStop}>Stop</button>
+                <button className='timer-button' onClick={handleReset}>Reset</button>
+            </div>
+        </>
     );
 };
 
