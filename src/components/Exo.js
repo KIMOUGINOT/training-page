@@ -5,8 +5,8 @@ const Exo = ({ exo }) => {
         <div className="Exo">
             <div className="exo-band"></div>
             <div className="exo-content">
-                <p>{exo.name}</p>
-                <p>{exo.duration}</p>
+                <p className="exo-title">{exo.name}</p>
+                <p className="exo-detail">{exo.duration}</p>
             </div>
         </div>        
     );

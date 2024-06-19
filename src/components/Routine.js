@@ -13,9 +13,9 @@ const Routine = ({ title, data }) => {
                     <button className="button">
                         <img src={process.env.PUBLIC_URL + '/icons/supprimer.png'} alt="Eraser icon" className="icon"/>
                     </button>
-                    <button className="button">
+                    {/* <button className="button">
                         <img src={process.env.PUBLIC_URL + '/icons/bouton-de-lecture.png'} alt="Read icon" className="icon"/>
-                    </button>
+                    </button> */}
                 </div>
             </div>
             {data.map((exo, index) => (

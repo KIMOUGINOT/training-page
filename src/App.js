@@ -51,9 +51,7 @@ function App() {
           <p className='page' onClick={() => setPage('timer')}>Timer</p>
         </div>
       </div>
-      <div className="main">
-        {renderPage()}
-      </div>
+      {renderPage()}
     </div>
   );
 }
