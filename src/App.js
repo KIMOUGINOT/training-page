@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { saveToLocalStorage, loadFromLocalStorage } from './localStorage';
+import React, { useState} from 'react';
 import './App.css';
 import Programs from './pages/Programs'
 import Home from './pages/Home'
@@ -7,14 +6,6 @@ import Stopwatch from './pages/Stopwatch'
 import Timer from './pages/Timer'
 
 function App() {
-  const [routines, setRoutines] = useState(() => loadFromLocalStorage('routines') || [
-    { title: "Monday", data: [{ name: "Bench", duration: "see prog" }, { name: "Cable  fly", duration: "3x10" },{ name: "Lateral raises", duration: "4x10" }, { name: "Dips", duration: "3x15" }] },
-    { title: "Evening Routine", data: [{ name: "sit up", duration: "45" }, { name: "squat", duration: "50" },{ name: "sit up", duration: "45" }, { name: "squat", duration: "50" }] },
-    { title: "Noon Routine", data: [{ name: "plank", duration: "60" }, { name: "burpees", duration: "30" }] },
-    { title: "Afternoon Routine", data: [{ name: "lunges", duration: "40" }, { name: "mountain climbers", duration: "50" }, { name: "bicep curls", duration: "35" }, { name: "tricep dips", duration: "45" }] },
-    { title: "Night Routine", data: [{ name: "bicep curls", duration: "35" }, { name: "tricep dips", duration: "45" }] },
-    { title: "Workout Routine", data: [{ name: "running", duration: "20" }, { name: "cycling", duration: "60" }] }
-  ]);
   const [page, setPage] = useState('home') ;
 
   const renderPage = () => {
@@ -22,7 +13,7 @@ function App() {
         case 'home':
             return <Home />;
         case 'programs':
-            return <Programs routines={routines} />;
+            return <Programs />;
         case 'stopwatch':
             return <Stopwatch />;
         case 'timer':
@@ -31,10 +22,6 @@ function App() {
           return <Home/>;
     }
   };
-
-  useEffect(() => {
-    saveToLocalStorage('routines', routines);
-  }, [routines]);
 
   return (
     <div className="App">
