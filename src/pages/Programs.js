@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { saveToLocalStorage, loadFromLocalStorage } from '../localStorage'
 import Routine from '../components/Routine';
+import RoutineForm from '../components/RoutineForm';
 
 const Programs = () => {
     const [routines, setRoutines] = useState(() => loadFromLocalStorage('routines') || [
@@ -21,12 +22,30 @@ const Programs = () => {
         setRoutines(updatedRoutines);
       };
     
+      const handleAdd = (newRoutine) => {
+        setRoutines(prevRoutines => {
+            const routineExists = prevRoutines.find(routine => routine.title === newRoutine.title);
+            
+            if (routineExists) {
+                const updatedRoutines = prevRoutines.map(routine => 
+                    routine.title === newRoutine.title
+                        ? { ...routine, data: [...routine.data, ...newRoutine.data] }
+                        : routine
+                );
+                return updatedRoutines;
+            } else {
+                return [...prevRoutines, newRoutine];
+            }
+        });
+    };
+    
     return (
         <div className='program-page-container'>
             <div className='add-training-button' onClick={() => {}}>
                 Add a training
                 <img src={process.env.PUBLIC_URL + '/icons/add.png'} alt="add icon" className="icon"/>
             </div>
+            <RoutineForm onAdd={handleAdd} />
             <div className="programs-container">
                 {routines.map((routine, index) => (
                     <Routine
