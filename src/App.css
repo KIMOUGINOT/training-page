@@ -166,23 +166,56 @@ body {
   font-weight: 400;
 }
 
-form {
-  margin-bottom: 20px;
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-form input {
-  margin: 5px;
-  padding: 8px;
-  font-size: 14px;
+.modal-content {
+  background-color: rgb(20,20,20);
+  border: 1.5px solid rgb(40,40,40);
+  color: whitesmoke;
+  padding: 20px;
+  min-width: 300px;
+  border-radius: 10px;
+  transition: background-color 0.3s, border-color 0.3s;
+  position: relative;
 }
 
-form button {
-  padding: 8px 12px;
-  background-color: #007bff;
-  color: white;
+.close-button {
+  background: none;
   border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
-  font-size: 14px;
+  color: #999999;
+}
+
+.program-page-container.modal-open {
+  filter: blur(5px);
+}
+
+.program-page-container {
+  filter: none;
+}
+
+
+.program-page-container.modal-open {
+  filter: blur(5px);
+}
+
+.program-page-container {
+  filter: none;
 }
 
 /* ================================== */

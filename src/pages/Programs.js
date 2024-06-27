@@ -13,6 +13,8 @@ const Programs = () => {
         { title: "Workout Routine", data: [{ name: "running", duration: "20" }, { name: "cycling", duration: "60" }] }
       ]);
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     useEffect(() => {
         saveToLocalStorage('routines', routines);
     }, [routines]);
@@ -20,9 +22,9 @@ const Programs = () => {
     const handleRemove = (title) => {
         const updatedRoutines = routines.filter(routine => routine.title !== title);
         setRoutines(updatedRoutines);
-      };
+    };
     
-      const handleAdd = (newRoutine) => {
+    const handleAdd = (newRoutine) => {
         setRoutines(prevRoutines => {
             const routineExists = prevRoutines.find(routine => routine.title === newRoutine.title);
             
@@ -37,15 +39,15 @@ const Programs = () => {
                 return [...prevRoutines, newRoutine];
             }
         });
+        setIsModalOpen(false);
     };
     
     return (
-        <div className='program-page-container'>
-            <div className='add-training-button' onClick={() => {}}>
+        <div className={`program-page-container ${isModalOpen ? '.modal-open' : ''}`}>
+            <div className='add-training-button' onClick={() => setIsModalOpen(true)}>
                 Add a training
                 <img src={process.env.PUBLIC_URL + '/icons/add.png'} alt="add icon" className="icon"/>
             </div>
-            <RoutineForm onAdd={handleAdd} />
             <div className="programs-container">
                 {routines.map((routine, index) => (
                     <Routine
@@ -56,6 +58,7 @@ const Programs = () => {
                     />
                 ))}
             </div>
+            {isModalOpen && <RoutineForm onAdd={handleAdd} onClose={() => setIsModalOpen(false)} />}
         </div>
     );
 } 
