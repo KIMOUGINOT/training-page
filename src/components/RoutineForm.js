@@ -30,6 +30,7 @@ const RoutineForm = ({ onAdd, onClose }) => {
                 <form onSubmit={handleSubmit}>
                     <input 
                         type="text" 
+                        className='input'
                         value={title} 
                         onChange={(e) => setTitle(e.target.value)} 
                         placeholder="Routine Title" 
@@ -39,6 +40,7 @@ const RoutineForm = ({ onAdd, onClose }) => {
                         <div key={index}>
                             <input 
                                 type="text" 
+                                className='input'
                                 value={exercise.name} 
                                 onChange={(e) => handleExerciseChange(index, 'name', e.target.value)} 
                                 placeholder="Exercise Name" 
@@ -46,6 +48,7 @@ const RoutineForm = ({ onAdd, onClose }) => {
                             />
                             <input 
                                 type="text" 
+                                className='input'
                                 value={exercise.duration} 
                                 onChange={(e) => handleExerciseChange(index, 'duration', e.target.value)} 
                                 placeholder="Duration" 
@@ -53,8 +56,8 @@ const RoutineForm = ({ onAdd, onClose }) => {
                             />
                         </div>
                     ))}
-                    <button type="button" onClick={handleAddExercise}>Add Exercise</button>
-                    <button type="submit">Add Routine</button>
+                    <button className='modal-button' type="button" onClick={handleAddExercise}>Add Exercise</button>
+                    <button className='modal-button' type="submit">Add Training</button>
                 </form>
             </div>
         </div>
