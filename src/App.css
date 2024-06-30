@@ -267,6 +267,11 @@ body {
   color: gray;
   font-size: 6vw;
 }
+
+.stopwatch-icon{
+  width: 55 px;
+  cursor: pointer;
+}
 .timer-button-container {
   display: flex;
   justify-content: space-between;

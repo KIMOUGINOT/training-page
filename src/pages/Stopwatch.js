@@ -52,9 +52,13 @@ const Stopwatch = () => {
             <div className='interface-container'>
                 <h1 className="timer">{formatTime(seconds)}</h1>
                 <div className='stopwatch-button-container'>
-                    <button className='stopwatch-button' onClick={handleStart}>Start</button>
+                    {/* <button className='stopwatch-button' onClick={handleStart}>Start</button>
                     <button className='stopwatch-button' onClick={handleStop}>Stop</button>
                     <button className='stopwatch-button' onClick={handleReset}>Reset</button>
+                    <button className='stopwatch-button' onClick={handleAddLap}>Add Lap</button> */}
+                    <img src={process.env.PUBLIC_URL + '/icons/resume.png'} alt="resume icon" className="stopwatch-icon" onClick={handleStart}/>
+                    <img src={process.env.PUBLIC_URL + '/icons/stop.png'} alt="stop icon" className="stopwatch-icon" onClick={handleStop}/>
+                    <img src={process.env.PUBLIC_URL + '/icons/reset.png'} alt="reset icon" className="stopwatch-icon" onClick={handleReset}/>
                     <button className='stopwatch-button' onClick={handleAddLap}>Add Lap</button>
                 </div>
             </div>
