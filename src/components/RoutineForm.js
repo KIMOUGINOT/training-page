@@ -44,7 +44,6 @@ const RoutineForm = ({ onAdd, onClose }) => {
                                 value={exercise.name} 
                                 onChange={(e) => handleExerciseChange(index, 'name', e.target.value)} 
                                 placeholder="Exercise Name" 
-                                required 
                             />
                             <input 
                                 type="text" 
@@ -52,7 +51,6 @@ const RoutineForm = ({ onAdd, onClose }) => {
                                 value={exercise.duration} 
                                 onChange={(e) => handleExerciseChange(index, 'duration', e.target.value)} 
                                 placeholder="Duration" 
-                                required 
                             />
                         </div>
                     ))}

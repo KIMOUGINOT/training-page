@@ -52,8 +52,10 @@ body {
 /* Program pages */
 
 .program-page-container{
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .programs-container {
@@ -207,14 +209,14 @@ body {
 .input {
   background-color: rgb(40,40,40);
   border-radius: 4px;
-  /* font-size: 20px; */
+  font-size: 20px;
   margin: 3px;
 }
 
 .modal-button{
   background-color: rgb(40,40,40);
   border-radius: 4px;
-  /* font-size: 20px; */
+  font-size: 20px;
   margin: 3px;
   color: whitesmoke;
   cursor: pointer;
@@ -237,6 +239,7 @@ body {
   display: block;
   align-items:flex-start;
   justify-content: space-around;
+  margin: 10px;
 }
 
 /* .interface-container{
