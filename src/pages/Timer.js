@@ -58,9 +58,9 @@ const Timer = () => {
                 <p className="timer">{formatTime(seconds)}</p>
             </div>
             <div className='timer-button-container'>
-                <button className='timer-button' onClick={handleStart}>Start</button>
-                <button className='timer-button' onClick={handleStop}>Stop</button>
-                <button className='timer-button' onClick={handleReset}>Reset</button>
+                <img src={process.env.PUBLIC_URL + '/icons/resume.png'} alt="resume icon" className="stopwatch-icon" onClick={handleStart}/>
+                <img src={process.env.PUBLIC_URL + '/icons/stop.png'} alt="stop icon" className="stopwatch-icon" onClick={handleStop}/>
+                <img src={process.env.PUBLIC_URL + '/icons/reset.png'} alt="reset icon" className="stopwatch-icon" onClick={handleReset}/>
             </div>
         </>
     );
